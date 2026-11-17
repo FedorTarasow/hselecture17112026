@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>Бустинги: от формул до промышленной практики · лекция 17.11.2026</title>
+<meta name="description" content="Материалы лекции Фёдора Тарасова: CatBoost с нуля, промышленная практика бустингов и бизнес-кейс «Взыскание».">
+<link rel="icon" id="favicon" href="data:,">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/shell.css">
+</head>
+<body>
+<header class="bar" id="bar">
+  <button class="bar__brand" type="button" data-open="intro" data-section="lector" title="К началу">
+    <img src="assets/img/emblem.webp" alt="" width="36" height="36" style="display:none">
+    <span class="bar__brand-text">Лекция<br>17.11.2026</span>
+  </button>
+
+  <nav class="tabs" aria-label="Разделы лекции">
+    <button class="tab" type="button" data-open="intro" data-section="lector"><span class="tab__label">О лекторе</span></button>
+    <button class="tab" type="button" data-open="intro" data-section="plan"><span class="tab__label">План</span></button>
+    <span class="tabs__sep" aria-hidden="true"></span>
+    <button class="tab tab--block" type="button" data-open="catboost"><span class="tab__no">1</span><span class="tab__label">CatBoost с&nbsp;нуля</span></button>
+    <button class="tab tab--block" type="button" data-open="practice"><span class="tab__no">2</span><span class="tab__label">Промышленная практика</span></button>
+    <button class="tab tab--block" type="button" data-open="case"><span class="tab__no">3</span><span class="tab__label">Бизнес-кейс</span></button>
+    <span class="tabs__sep" aria-hidden="true"></span>
+    <button class="tab" type="button" data-open="finale"><span class="tab__label">Заключение</span></button>
+  </nav>
+
+  <div class="inblock" id="inblock" hidden>
+    <button class="inblock__menu" type="button" id="secBtn" aria-haspopup="true" aria-expanded="false" title="Содержание блока">
+      <span class="inblock__burger" aria-hidden="true"></span>
+      <span class="inblock__title" id="secTitle">Содержание</span>
+    </button>
+    <span class="inblock__pos" id="pos" aria-live="polite">–</span>
+  </div>
+
+  <a class="pdf" id="pdfBtn" href="files/CatBoost-karta-pamyati.pdf" download="CatBoost — карта памяти.pdf" hidden title="Раздатка к блоку 1: весь вывод на двух страницах">
+    <span class="pdf__icon" aria-hidden="true"></span><span class="pdf__text">Карта памяти<small>PDF</small></span>
+  </a>
+
+  <button class="bar__fs" type="button" id="fsBtn" title="Во весь экран" aria-label="Во весь экран"><span aria-hidden="true"></span></button>
+</header>
+
+<main class="stage" id="stage">
+  <div class="stage__loading" id="loading"><div class="stage__loading-card"><span class="stage__loading-dot"></span>Открываю дело…</div></div>
+</main>
+
+<footer class="rail" id="rail">
+  <div class="rail__progress" aria-hidden="true"><span id="railFill"></span></div>
+  <span class="rail__where" id="railWhere"></span>
+  <span class="rail__hint">листать: кнопка справа, → или пробел</span>
+  <button class="rail__btn rail__btn--prev" type="button" id="prevBtn" title="Назад (←)" aria-label="Назад">◄</button>
+  <button class="rail__btn rail__btn--next" type="button" id="nextBtn" title="Дальше: следующий шаг, слайд или блок (→)"><span>Дальше</span><i aria-hidden="true">►</i></button>
+</footer>
+
+<div class="menu-backdrop" id="menuBackdrop" hidden></div>
+<aside class="menu" id="menu" hidden aria-label="Содержание блока">
+  <div class="menu__head"><span id="menuBlock"></span><button type="button" class="menu__close" id="menuClose" aria-label="Закрыть">×</button></div>
+  <div class="menu__list" id="menuList"></div>
+</aside>
+
+<script src="assets/shell.js"></script>
+</body>
+</html>
